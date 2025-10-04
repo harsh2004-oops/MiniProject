@@ -1,0 +1,3 @@
+- [x] Rename frontEnd/postcss.config.cjs to frontEnd/postcss.config.js (reverted to .cjs)
+- [x] Update frontEnd/vite.config.js to include css.postcss configuration
+- [x] Test the setup by running npm run dev in frontEnd
