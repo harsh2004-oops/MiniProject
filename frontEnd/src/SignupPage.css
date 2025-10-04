@@ -1,6 +1,6 @@
-/* Login Page Styles */
+/* Signup Page Styles */
 
-.login-page {
+.signup-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@
   background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
 }
 
-.login-form-container {
+.signup-form-container {
   padding: 2rem;
   background-color: white;
   border: 1px solid #e5e7eb;
@@ -34,14 +34,14 @@
   color: #1f2937; /* gray-800 */
 }
 
-.login-title {
+.signup-title {
   font-size: 1.875rem; /* text-3xl */
   font-weight: bold;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.login-form {
+.signup-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem; /* space-y-6 */
@@ -69,6 +69,22 @@
 }
 
 .form-input:focus {
+  outline: none;
+  border-color: #6366f1; /* indigo-500 */
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.form-select {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+.form-select:focus {
   outline: none;
   border-color: #6366f1; /* indigo-500 */
   box-shadow: 0 0 0 1px #6366f1;
