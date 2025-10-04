@@ -1,0 +1,64 @@
+/* Landing Page Styles */
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* gray-100 */
+}
+
+.welcome-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem; /* text-2xl */
+  margin-bottom: 2.5rem;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 2rem; /* space-x-8 */
+}
+
+.role-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.role-button.student {
+  background-color: #3b82f6; /* blue-500 */
+}
+
+.role-button.student:hover {
+  background-color: #2563eb; /* blue-600 */
+}
+
+.role-button.teacher {
+  background-color: #10b981; /* green-500 */
+}
+
+.role-button.teacher:hover {
+  background-color: #059669; /* green-600 */
+}
+
+.role-icon {
+  margin-bottom: 0.5rem;
+}
+
+.role-label {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600;
+}
