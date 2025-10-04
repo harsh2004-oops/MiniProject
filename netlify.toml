@@ -1,0 +1,6 @@
+# This file tells Netlify how to build and deploy your site.
+
+[build]
+  base    = "frontEnd"      # The folder where your frontend code lives.
+  command = "npm run build" # The command to build your site (for Vite/React).
+  publish = "frontEnd/dist" # The folder that gets deployed.
