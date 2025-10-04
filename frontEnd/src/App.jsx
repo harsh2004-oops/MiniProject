@@ -1,42 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './LandingPage.jsx';
 import LoginPage from './LoginPage.jsx';
 import SignupPage from './SignupPage.jsx';
-import TestTailwind from './TestTailwind.jsx';
+// Removed import of non-existent TestTailwind.jsx to fix error
+
+// You can also add Dashboard components here
+// import StudentDashboard from './StudentDashboard.jsx';
+// import TeacherDashboard from './TeacherDashboard.jsx';
 
 function App() {
-  const [role, setRole] = useState(null); // 'student', 'teacher', or null
-  const [isSignup, setIsSignup] = useState(false);
-
-  const handleRoleSelect = (selectedRole) => {
-    setRole(selectedRole);
-    setIsSignup(false);
-  };
-
-  const handleBack = () => {
-    setRole(null);
-    setIsSignup(false);
-  };
-
-  const handleSignupClick = () => {
-    setIsSignup(true);
-    setRole(null);
-  };
-
-  if (isSignup) {
-    return <SignupPage onBack={handleBack} />;
-  }
-
-  if (!role) {
-    return (
-      <>
-        <LandingPage onRoleSelect={handleRoleSelect} onSignupClick={handleSignupClick} />
-        <TestTailwind />
-      </>
-    );
-  }
-
-  return <LoginPage role={role} onBack={handleBack} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login/student" element={<LoginPage role="student" />} />
+        <Route path="/login/teacher" element={<LoginPage role="teacher" />} />
+        <Route path="/signup" element={<SignupPage />} />
+        {/* Add routes for after login */}
+        {/* <Route path="/dashboard/student" element={<StudentDashboard />} /> */}
+        {/* <Route path="/dashboard/teacher" element={<TeacherDashboard />} /> */}
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
